@@ -9,8 +9,15 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid hsl(0 0% 90%);
+  padding-left:20px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  z-index: 999999;
+  background-color: white;
 }
-/*                    Alternative way to position navbar elements - anchor tags
+              /*    Alternative way to position navbar elements - anchor tags
 .navbar a{
 float:left;
 display:block;
@@ -18,13 +25,12 @@ color: black;
 text-decoration: none;
 padding: 10px 16px;
 margin: 0px;
-
 }
 .navbar a:hover{
 color: white;
 background-color: black;
-}*/
-
+} */
+.logo{font-family: 'Piedra', cursive;}
 .navbar{        /*flex items in left nav and remove whitespace*/
   display: flex;
   flex-direction: row;
@@ -35,13 +41,191 @@ background-color: black;
   text-decoration: none;
   color:black;
   padding: 10px 16px;
+  text-transform: uppercase;
 }
 .navbar a:hover{ /*style anchor tags in hover state*/
   color: white;
   background-color: black;
 }
+
+
 a.active{
   color: white;
   background-color: black;
 
+}
+
+.intro{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  text-align: center;
+  padding-top: 20%;
+}
+
+.explore-style{
+  position: absolute;
+  bottom: 5em;
+    left:48%;
+}
+
+.btn{            /*  general button style */
+  background-color: black;
+  color: white;
+  padding: 14px 16px;
+  border:none;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+div{
+  position:relative;
+}
+
+ /* div h1{     original - main intro with no background image
+  position: absolute;
+  font-size: 6em;
+  border: 5px solid black;
+  padding: 20px;
+  width: 40%;
+  margin: auto;
+  text-transform: uppercase;
+  font-family: 'Piedra', cursive;
+  color: black;
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  }
+*/
+
+  div h1{      /*Alternative- main intro with background image */
+    position: absolute;
+    font-size: 6em;
+    background-image: url('batik1.jpeg');
+    color: white;
+    padding: 20px;
+    width: 40%;
+    margin: auto;
+    text-transform: uppercase;
+    font-family: 'Piedra', cursive;
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+    }
+
+@keyframes fade {       /*animation for intro text fade in*/
+  0%{
+    opacity: 0;
+    left: 15%;
+  }
+  50%{
+    opacity: 0.5;
+    left: 25%;
+  }
+  100%{
+    opacity: 1;
+  left: 30%;
+  }
+}
+
+/*div h1:hover{                  hover with background image change to batik1
+animation-name: branding;
+animation-duration: 500ms;
+animation-fill-mode: forwards;
+}
+
+@keyframes branding {
+  100%{
+    font-size: 6em;
+    padding: 20px;
+    width: 40%;
+    margin: auto;
+    text-transform: uppercase;
+    font-family: 'Piedra', cursive;
+    border: none;
+    background-image: url('batik1.jpeg');
+    color: white;
+  }
+
+}*/
+
+
+h1 + p, h2 + p {     /* style intro paragraph */
+  margin-top: 30px;
+  width: 60%;
+  padding: 30px;
+  margin: auto;
+  text-align: center;
+  font-weight: 800;
+}
+
+div p{
+  margin-top: 20vh;
+}
+
+section{padding-top: 80px;}
+h2{          /* style for h2 text */
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+  border: solid;
+  width: 30%;
+  margin:auto;
+  padding: 20px;
+  font-family: 'Piedra', cursive;
+  background-color: #ffffff;
+  }
+
+
+.project-tiles{ /*project section tiles group grid style*/
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  margin: auto;
+  justify-items: center;
+  padding: 40px;
+  grid-gap: 10px;
+}
+
+.project-tiles img{
+width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-tiles a{
+
+}
+
+.tile1, .tile5{
+  grid-row: 1/5;
+}
+.tile2, .tile6{
+  grid-row: 5/6;
+}
+.tile3{
+  grid-row: 1/3;
+}
+.tile4{
+  grid-row: 3/6;
+}
+
+ul {
+  padding: 40px;
+
+}
+.footer-style{
+  background-color: black;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.footer-text a{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding:20px;
 }
